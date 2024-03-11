@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+    <title>Result</title>
+</head>
+<body class="bg-[#111827]/90">
+
+    <%if (locals.verifiedEmails && verifiedEmails.length > 0) { %>
+        <div class="h-[20%] flex items-center justify-center">
+            <div class="bg-emerald-300/80 p-2 rounded-lg">
+                <%= verifiedEmails.length %> emails sent successfully!
+            </div>
+        </div>
+    <% } else { %>
+        <div class="h-[20%] flex items-center justify-center">
+            <div class="bg-rose-300/90 text-red-800 p-2 rounded-lg">
+                Error while sending emails.
+            </div>
+        </div>
+    <% } %>
+
+    <div class="min-h-[50%] flex justify-center items-center gap-4">
+        <div class="w-[40%] h-fit p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-4 dark:bg-gray-800 dark:border-gray-700"">
+            <h3 class="text-xl text-white font-semibold">
+                Verified Emails
+            </h3>
+           
+            <%if (locals.verifiedEmails){ %>
+                <div class="flex flex-wrap gap-2 justify-center items-center mt-4">
+                    <% verifiedEmails.forEach(function(email) { %>
+                        <p class="p-1 rounded-lg bg-emerald-300 flex-1">
+                            <%= email %>
+                        </p>
+                    <% }); %>
+                </div>
+            <% } %>
+        </div>
+        <div class="w-[40%] h-fit p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-4 dark:bg-gray-800 dark:border-gray-700"">
+            <h3 class="text-xl text-white font-semibold">
+                Unverified Emails
+            </h3>
+           
+            <%if (locals.unverifiedEmails){ %>
+                <div class="flex flex-wrap gap-2 justify-center items-center mt-4">
+                    <% unverifiedEmails.forEach(function(email) { %>
+                        <p class="p-1 rounded-lg bg-rose-300 flex-1">
+                            <%= email %>
+                        </p>
+                    <% }); %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+</body>
+</html>

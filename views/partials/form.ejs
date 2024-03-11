@@ -1,0 +1,61 @@
+        <div class="w-[70%] max-w-sm p-16 bg-gray-800 border border-gray-700 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <form 
+                action="/send-emails" 
+                method="post"
+                enctype="multipart/form-data"
+                class="flex flex-col"
+            >
+                <div class="mb-4">
+                    <label for="subject" class="block mb-2 text-sm font-medium text-white dark:text-white">
+                        Email Subject
+                    </label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject"
+                        class="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                </div>
+                <div class="mb-4">
+                    <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Email Content Title
+                    </label>
+                    <input 
+                        type="text" 
+                        id="title" 
+                        name="title"
+                        class="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                </div>
+                <div class="mb-4">
+                    <label 
+                        for="content" 
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                        Email Content
+                    </label>
+                    <textarea 
+                        id="content" 
+                        name="content"
+                        rows="4" 
+                        class="block p-2.5 w-full text-sm text-white bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                        placeholder="Enter email content"
+                    ></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="csvFile" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Emails CSV file
+                    </label>
+                    <input 
+                        type="file" 
+                        id="csvFile" 
+                        name="csvFile"
+                        accept=".csv"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                </div>
+                <button 
+                    class="bg-white p-2 rounded-xl font-semibold hover:bg-white/90 transition"
+                    type="submit"
+                >
+                    Send
+                </button>
+            </form>
+        </div>
