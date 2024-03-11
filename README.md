@@ -52,3 +52,10 @@ npm run style
 ### Important Notes:
 - Make sure your AWS SES service is correctly configured and verified to avoid any issues with email sending.
 - Ensure that the CSV file contains email addresses in a single column without any headers.
+
+### Screenshots
+- Home page
+![image](https://github.com/NegativE333/ses-quick-mailer/assets/102456428/b907f9fb-b564-4aa1-b792-dca0e093d0e1)
+
+- Result page
+![image](https://github.com/NegativE333/ses-quick-mailer/assets/102456428/4170e00a-2f6e-4e14-a494-68465b96a001)
